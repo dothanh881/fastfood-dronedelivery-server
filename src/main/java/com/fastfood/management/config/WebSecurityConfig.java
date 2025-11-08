@@ -100,6 +100,7 @@ public class WebSecurityConfig {
     configuration.setAllowedOrigins(Arrays.asList(
       "http://localhost:3000",
       "http://localhost:8080",
+      "https://fastfood-dronedelivery-ecommerce.vercel.app",
       "https://*.replit.dev"
     ));
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
