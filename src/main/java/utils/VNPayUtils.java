@@ -58,13 +58,15 @@ public class VNPayUtils {
 
     public static String getCreateDate() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+7"));
+        formatter.setTimeZone(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
+        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
         return formatter.format(cal.getTime());
     }
 
     public static String getExpireDate() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
-        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+7"));
+        formatter.setTimeZone(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
+        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
 
         // Add 15 minutes to the current date and time
         cal.add(Calendar.MINUTE, 15);
