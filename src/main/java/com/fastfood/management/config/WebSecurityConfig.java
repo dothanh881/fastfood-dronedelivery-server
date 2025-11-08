@@ -103,7 +103,8 @@ public class WebSecurityConfig {
       "http://localhost:3000",
       "http://localhost:8080",
       "https://fastfood-dronedelivery.vercel.app",
-      "https://fastfood-dronedelivery-ecommerce.vercel.app"
+      "https://fastfood-dronedelivery-ecommerce.vercel.app",
+      "https://fastfood-dronedelivery-cnpm.vercel.app"
     ));
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
     configuration.setAllowedHeaders(Arrays.asList("*"));
