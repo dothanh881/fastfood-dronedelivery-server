@@ -37,7 +37,9 @@ public class WebSecurityConfig {
       .csrf().disable()
       .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
       .authorizeHttpRequests()
+       // Cho phép endpoints auth cả khi có context-path /api
        .requestMatchers("/auth/**").permitAll()
+       .requestMatchers("/api/auth/**").permitAll()
         // Error page should be publicly accessible to avoid 403 loops
         .requestMatchers(HttpMethod.GET, "/error").permitAll()
         // Public static resources (served via resource handler)
@@ -100,8 +102,8 @@ public class WebSecurityConfig {
     configuration.setAllowedOrigins(Arrays.asList(
       "http://localhost:3000",
       "http://localhost:8080",
-      "https://fastfood-dronedelivery-ecommerce.vercel.app",
-      "https://*.replit.dev"
+      "https://fastfood-dronedelivery.vercel.app",
+      "https://fastfood-dronedelivery-ecommerce.vercel.app"
     ));
     configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
     configuration.setAllowedHeaders(Arrays.asList("*"));
